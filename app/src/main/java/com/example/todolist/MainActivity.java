@@ -28,13 +28,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_screen);
+        setContentView(R.layout.activity_main);
 
         Button btnClick = findViewById(R.id.button_add_task);
         btnClick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Aquí colocas la lógica que deseas ejecutar cuando se presiona el botón
                 Toast.makeText(MainActivity.this, "¡Botón presionado test!", Toast.LENGTH_SHORT).show();
             }
         });
