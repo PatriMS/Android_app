@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Aquí colocas la lógica que deseas ejecutar cuando se presiona el botón
-                Toast.makeText(MainActivity.this, "¡Botón presionado!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "¡Botón presionado test!", Toast.LENGTH_SHORT).show();
             }
         });
     }
