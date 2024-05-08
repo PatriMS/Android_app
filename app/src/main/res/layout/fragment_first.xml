@@ -17,11 +17,10 @@
             android:id="@+id/Newtask_text"
             android:layout_width="157dp"
             android:layout_height="49dp"
-            android:autofillHints=""
+            android:layout_weight="1"
             android:ems="10"
             android:inputType="text"
-            android:text="@string/Add_task"
-            tools:ignore="LabelFor" />
+            android:text="" />
 
         <Space
             android:layout_width="50dp"
