@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="GradientButtonStyle">
+    <style name="GradientButtonStyle1">
         <!-- Otros atributos -->
-        <item name="android:background">@drawable/button_style</item> <!-- Aplicar el fondo del gradiente -->
+        <item name="android:background">@drawable/click_effect</item> <!-- Aplicar el fondo del gradiente -->
+
+    </style>
+    <style name="Layout_new_task">
+        <!-- Otros atributos -->
+        <item name="android:background">@drawable/new_task_layout</item> <!-- Aplicar el fondo del gradiente -->
     </style>
 </resources>

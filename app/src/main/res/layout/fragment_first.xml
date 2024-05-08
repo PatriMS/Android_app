@@ -8,10 +8,12 @@
     tools:context=".FirstFragment">
 
     <LinearLayout
+        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="50dp"
-        tools:ignore="UselessParent">
+        tools:ignore="UselessParent"
+        style="@style/Layout_new_task">
 
         <EditText
             android:id="@+id/Newtask_text"
@@ -20,16 +22,18 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="text"
-            android:text="" />
+            android:text=""
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <Space
             android:layout_width="50dp"
             android:layout_height="60dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            />
 
         <Button
             android:id="@+id/button_add_task"
-            style="@style/GradientButtonStyle"
+            style="@style/GradientButtonStyle1"
             android:layout_width="141dp"
             android:layout_height="60dp"
             android:text="ADD"

@@ -1,0 +1,6 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Estado cuando se presiona el botón -->
+    <item android:drawable="@drawable/button_style_pressed" android:state_pressed="true" />
+    <!-- Estado por defecto -->
+    <item android:drawable="@drawable/button_style" />
+</selector>
