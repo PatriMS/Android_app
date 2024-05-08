@@ -2,18 +2,7 @@ package com.example.todolist;
 
 import android.os.Bundle;
 
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.view.View;
-
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-
-import com.example.todolist.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,10 +15,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private AppBarConfiguration appBarConfiguration;
-    private ActivityMainBinding binding;
     private LinearLayout checkboxContainer;
-    private int checkBoxCounter = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +24,10 @@ public class MainActivity extends AppCompatActivity {
 
         Button btnClick = findViewById(R.id.button_add_task);
         checkboxContainer = findViewById(R.id.checkbox_layout);
-        btnClick.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "¡test!", Toast.LENGTH_SHORT).show();
-                addCheckBox();
-            }
+
+        btnClick.setOnClickListener(v -> {
+            Toast.makeText(MainActivity.this, "¡Added!", Toast.LENGTH_SHORT).show();
+            addCheckBox();
         });
     }
 
