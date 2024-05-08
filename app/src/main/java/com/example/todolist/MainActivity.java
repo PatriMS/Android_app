@@ -17,13 +17,18 @@ import com.example.todolist.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
+    private LinearLayout checkboxContainer;
+    private int checkBoxCounter = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
         btnClick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "¡Botón presionado test!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "¡test!", Toast.LENGTH_SHORT).show();
+                addCheckBox();
             }
         });
     }
@@ -59,6 +65,21 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+    private void addCheckBox() {
+     /*   CheckBox checkBox = new CheckBox(this);
+        checkBox.setText("CheckBox " + checkBoxCounter);
+
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+        );
+
+        checkboxContainer.addView(checkBox, layoutParams);
+
+        checkBoxCounter++;*/
     }
 
 }
