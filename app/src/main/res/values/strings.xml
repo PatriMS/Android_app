@@ -5,4 +5,5 @@
     <string name="first_fragment_label">First Fragment</string>
     <string name="add">Add</string>
     <string name="previous">Previous</string>
+    <string name="Add_task">Add new task</string>
 </resources>

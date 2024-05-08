@@ -21,6 +21,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button btnClick = findViewById(R.id.button_add_task);
+        checkboxContainer = findViewById(R.id.checkbox_layout);
         btnClick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,8 +71,10 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void addCheckBox() {
-     /*   CheckBox checkBox = new CheckBox(this);
-        checkBox.setText("CheckBox " + checkBoxCounter);
+        CheckBox checkBox = new CheckBox(this);
+        TextView textView = findViewById(R.id.Newtask_text);
+        String Newtask_text_string = textView.getText().toString();
+        checkBox.setText(Newtask_text_string);
 
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT,
@@ -79,7 +83,6 @@ public class MainActivity extends AppCompatActivity {
 
         checkboxContainer.addView(checkBox, layoutParams);
 
-        checkBoxCounter++;*/
     }
 
 }
