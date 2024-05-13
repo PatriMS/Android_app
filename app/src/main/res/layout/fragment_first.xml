@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/bacground_pink"
     tools:context=".FirstFragment">
 
     <LinearLayout
@@ -21,6 +22,7 @@
             android:layout_height="49dp"
             android:layout_weight="1"
             android:ems="10"
+            android:background="@color/white"
             android:inputType="text"
             android:text=""
             tools:ignore="SpeakableTextPresentCheck" />
@@ -45,10 +47,24 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/checkbox_layout"
+    <ScrollView
+        style="@style/Layout_new_task"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"></LinearLayout>
+        android:layout_height="239dp"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="20dp">
+
+        <LinearLayout
+            android:id="@+id/checkbox_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical">
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

@@ -9,4 +9,9 @@
         <!-- Otros atributos -->
         <item name="android:background">@drawable/new_task_layout</item> <!-- Aplicar el fondo del gradiente -->
     </style>
+
+    <style name="Layout_new_taskv2">
+        <!-- Otros atributos -->
+        <item name="android:background">@drawable/new_task_layoutv2</item> <!-- Aplicar el fondo del gradiente -->
+    </style>
 </resources>
