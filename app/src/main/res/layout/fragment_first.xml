@@ -25,7 +25,9 @@
             android:background="@color/white"
             android:inputType="text"
             android:text=""
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:fontFamily="@font/caveat_font"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:textSize="30dp"/>
 
         <Space
             android:layout_width="50dp"
@@ -62,7 +64,8 @@
             android:layout_marginTop="20dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+           >
         </LinearLayout>
 
     </ScrollView>

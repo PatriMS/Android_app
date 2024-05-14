@@ -1,8 +1,10 @@
 package com.example.todolist;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,6 +18,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private LinearLayout checkboxContainer;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,10 +59,16 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void addCheckBox() {
+
+        Typeface typeface = ResourcesCompat.getFont(this, R.font.caveat_font);
         CheckBox checkBox = new CheckBox(this);
+
         TextView textView = findViewById(R.id.Newtask_text);
         String Newtask_text_string = textView.getText().toString();
+        checkBox.setTypeface(typeface);
         checkBox.setText(Newtask_text_string);
+        checkBox.setTextSize(30);
+
 
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT,
