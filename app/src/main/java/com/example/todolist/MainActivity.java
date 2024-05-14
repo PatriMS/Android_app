@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
 
     private LinearLayout checkboxContainer;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button btnClick = findViewById(R.id.button_add_task);
         checkboxContainer = findViewById(R.id.checkbox_layout);
+
 
         btnClick.setOnClickListener(v -> {
             Toast.makeText(MainActivity.this, "¡Added!", Toast.LENGTH_SHORT).show();
@@ -57,18 +57,15 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
     private void addCheckBox() {
 
         Typeface typeface = ResourcesCompat.getFont(this, R.font.caveat_font);
         CheckBox checkBox = new CheckBox(this);
-
         TextView textView = findViewById(R.id.Newtask_text);
         String Newtask_text_string = textView.getText().toString();
         checkBox.setTypeface(typeface);
         checkBox.setText(Newtask_text_string);
         checkBox.setTextSize(30);
-
 
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT,
@@ -77,6 +74,11 @@ public class MainActivity extends AppCompatActivity {
 
         checkboxContainer.addView(checkBox, layoutParams);
 
+        checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) {
+                ((LinearLayout) checkBox.getParent()).removeView(checkBox);
+            }
+        });
     }
 
 }
